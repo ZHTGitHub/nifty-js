@@ -2,10 +2,13 @@
   "name": "rocket-nifty.js",
   "version": "1.0.0",
   "description": "JavaScript实用功能",
-  "main": "index.js",
+  "main": "rocket-nifty.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup --config"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "zenghaitao",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-terser": "^7.0.2"
+  }
 }
