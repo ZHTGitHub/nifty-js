@@ -72,7 +72,7 @@ export const compressFile = (file, quality = 0.2) => {
 
         const canvasURL = canvas.toDataURL('image/jpeg', quality)
 
-        resolve(fileEvents.base64ToFile(canvasURL, file.name))
+        resolve(base64ToFile(canvasURL, file.name))
       }
 
       image.src = src
