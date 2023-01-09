@@ -52,6 +52,42 @@ export const base64ToFile = (base64, name) => {
   return new File([u8arr], name, { type: mime })
 }
 
+// 格式转换
+export const formatConvert = (file, extName = 'jpeg') => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader() 
+
+    reader.onload = (event) => {
+      const { target: { result: src } } = event
+
+      const image = new Image() 
+
+      image.onload = async () => {
+        const canvas = document.createElement('canvas') 
+        canvas.width = image.width
+        canvas.height = image.height
+
+        const ctx = canvas.getContext('2d')
+        ctx.drawImage(image, 0, 0, image.width, image.height) 
+
+        const canvasURL = canvas.toDataURL('image/' + extName)
+
+        const newName = file.name.replace(/([^\.]+)$/, extName)
+
+        resolve(base64ToFile(canvasURL, newName))
+      }
+
+      image.src = src
+    }
+
+    reader.readAsDataURL(file)
+
+    reader.onerror = function(error) {
+      reject(error)
+    }
+  })
+}
+
 // 压缩文件
 export const compressFile = (file, quality = 0.2) => {
   return new Promise((resolve, reject) => {
@@ -70,9 +106,13 @@ export const compressFile = (file, quality = 0.2) => {
         const ctx = canvas.getContext('2d')
         ctx.drawImage(image, 0, 0, image.width, image.height) 
 
-        const canvasURL = canvas.toDataURL('image/jpeg', quality)
+        const extName = 'jpeg'
 
-        resolve(base64ToFile(canvasURL, file.name))
+        const canvasURL = canvas.toDataURL('image/' + extName, quality)
+
+        const newName = file.name.replace(/([^\.]+)$/, extName)
+
+        resolve(base64ToFile(canvasURL, newName))
       }
 
       image.src = src
