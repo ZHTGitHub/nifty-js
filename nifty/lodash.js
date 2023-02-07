@@ -6,7 +6,7 @@ const basePath = function(path) {
 
   // 若有 '[',']'，则替换成将 '[' 替换成 '.',去掉 ']'
   return path.replace(/\[/g, '.').replace(/\]/g, '').split('.')
-};
+}
 
 export const get = function(object, path, defaultValue) {
   // 判断 object 是否是数组或者对象，否则直接返回默认值 defaultValue
@@ -15,7 +15,7 @@ export const get = function(object, path, defaultValue) {
 
   // 沿着路径寻找到对应的值，未找到则返回默认值 defaultValue
   return basePath(path).reduce((o, k) => (o || {})[k], object) || defaultValue
-};
+}
 
 export const set =  function(object, path, value) {
   if (typeof object !== 'object') 
@@ -34,5 +34,5 @@ export const set =  function(object, path, value) {
   }, object)
 
   return object
-};
+}
 

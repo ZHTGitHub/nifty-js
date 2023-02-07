@@ -127,22 +127,22 @@ export const compressFile = (file, quality = 0.2) => {
 }
 
 // 下载文件
-export const saveFile = (blob, filename) => {
-	if (window.navigator.msSaveOrOpenBlob) {
-		window.navigator.msSaveOrOpenBlob(blob, filename)
-	} 
-  else {
-		const anchor = document.createElement('a')
-		document.body.appendChild(anchor)
-		const url = window.URL.createObjectURL(blob)
+// export const saveFile = (blob, filename) => {
+// 	if (window.navigator.msSaveOrOpenBlob) {
+// 		window.navigator.msSaveOrOpenBlob(blob, filename)
+// 	} 
+//   else {
+// 		const anchor = document.createElement('a')
+// 		document.body.appendChild(anchor)
+// 		const url = window.URL.createObjectURL(blob)
 		
-    anchor.href = url
-		anchor.download = filename
-		anchor.click()
+//     anchor.href = url
+// 		anchor.download = filename
+// 		anchor.click()
 
-		setTimeout(() => {
-			window.URL.revokeObjectURL(url)
-			document.body.removeChild(anchor)
-		}, 0)
-	}
-}
+// 		setTimeout(() => {
+// 			window.URL.revokeObjectURL(url)
+// 			document.body.removeChild(anchor)
+// 		}, 0)
+// 	}
+// }
