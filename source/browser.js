@@ -44,11 +44,11 @@ export const getViewportSize = function() {
 
 /**
  * @description 将 url 参数解析为 JS 对象
- * @param {String} search
+ * @param {String} query
  */ 
- export const queryToObject = function(search) {
+ export const queryToObject = function(query) {
   const obj = {}
-  const params = search.replace(/^\?/, '')
+  const params = query.replace(/^\?/, '')
 
   params.split('&').map(item => {
       const arr = item.split('=')

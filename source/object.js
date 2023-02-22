@@ -30,9 +30,8 @@ export const deepClone = function(value = {}) {
  * @description 返回匹配元素，否则返回 undefined
  * @param {Object[]} collection
  * @param {Array|Object|String} predicate
- * @param {Object} deepClone
  */ 
-export const find = function(collection, predicate, deepClone = false) {
+export const find = function(collection, predicate) {
   // predicate 为数组
   if(isArray(predicate)) {
     const [key, val] = predicate
@@ -139,7 +138,7 @@ export const findIndex = function(collection, predicate) {
  * @param {Any[]} value
  * @param {Boolean} deepClone
  */ 
- export const flatArray = function(value = [], deepClone = false) {
+ export const flatArray = function(value = []) {
   const isDeep = value.some(item => item instanceof Array)
 
   if(!isDeep) {        
@@ -156,7 +155,7 @@ export const findIndex = function(collection, predicate) {
  * @param {Any[]} value
  * @param {Boolean} deepClone
  */ 
- export const removeDuplicate = function(value = [], deepClone = false) {
+ export const removeDuplicate = function(value = []) {
   if(!Array.isArray(value)) {
     return value
   }
