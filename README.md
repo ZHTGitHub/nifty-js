@@ -136,46 +136,20 @@ value: 字符串日期/日期对象，不传则为当前时间.
 
 #### Returns
 
-({ 
-
-  year: number, 
-
-  month: number, 
-
-  day: number, 
-
-  date: number, 
-
-  hours: number, 
-  
-  minutes: number, 
-
-  seconds: number, 
-
-  milliseconds: number, 
-
-  time: number, 
-
-  normalMonth: number, 
-
-  am00Time: number, 
-
-  pm24Time: number 
-
-}): year年, month当前月份(0-11), day周, date日, 
-
-hours时, minutes分, seconds秒, milliseconds毫秒, 
-
-time自 1970 年 1 月 1 日 00:00:00 UTC 到当前时间的毫秒数, 
-
-normalMonth当前月份(1-12), 
-
-am00Time为0点, pm24Time为24点.
-
 |  属性   | 说明  | 类型  |
 |  ----  | ----  | ----  |
 | year   | 年份  | number  |
-| month  | 月份  | number  |
+| month  | 当前月份(0-11)  | number  |
+| day  | 周几  | number  |
+| date  | 日  | number  |
+| hours  | 时  | number  |
+| minutes  | 分  | number  |
+| seconds  | 秒  | number  |
+| milliseconds  | 毫秒  | number  |
+| time  | 自 1970 年 1 月 1 日 00:00:00 UTC 到当前时间的毫秒数  | number  |
+| normalMonth  | 当前月份(1-12)  | number  |
+| am00Time  | 0点  | number  |
+| pm24Time  | 24点  | number  |
 
 
 #### Example
