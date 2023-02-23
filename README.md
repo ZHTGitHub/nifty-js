@@ -222,4 +222,25 @@ console.log(result)
 // => 1
 ```
 
+### deepClone(value)
+
+深拷贝
+
+#### Arguments
+
+value: 任意值
+
+#### Returns
+
+(*): 返回新的对象.
+
+
+#### Example
+
+```bash
+const obj = {name: 'leslie', list: ['fruit']}
+const result = deepClone(obj)
+console.log(result)
+// => {name: 'leslie', list: ['fruit']}
+```
 

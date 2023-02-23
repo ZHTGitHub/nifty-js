@@ -22,7 +22,7 @@ export declare function findIndex(collection: any[], predicate: any): number;
 export declare function flatArray(value: any[]): any[];
 export declare function removeDuplicate(value: any[]): any[];
 
-export declare function getType(value: any): 'boolean' | 'NaN' | 'number' | 'string' | 'array' | 'function' | 'object' | 'null' | 'undefined' | 'symbol' | value;
+export declare function getType(value: any): 'boolean' | 'NaN' | 'number' | 'string' | 'array' | 'function' | 'object' | 'null' | 'undefined' | 'symbol';
 export declare function isArray(value: any): boolean;
 export declare function isBoolean(value: any): boolean;
 export declare function isFunction(value: any): boolean;
