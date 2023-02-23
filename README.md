@@ -159,9 +159,17 @@ value: 字符串日期/日期对象，不传则为当前时间.
   normalMonth: number, 
 
   am00Time: number, 
-  
+
   pm24Time: number 
-}): year: 年, month: 当前月份(0-11), day: 周, date: 日, hours: 时, minutes: 分, seconds: 秒, milliseconds: 毫秒, time: 自 1970 年 1 月 1 日 00:00:00 UTC 到当前时间的毫秒数, normalMonth: 当前月份(1-12), am00Time: 0点, pm24Time: 24点.
+}): year年, month当前月份(0-11), day周, date日, 
+
+hours时, minutes分, seconds秒, milliseconds毫秒, 
+
+time自 1970 年 1 月 1 日 00:00:00 UTC 到当前时间的毫秒数, 
+
+normalMonth当前月份(1-12), 
+
+am00Time为0点, pm24Time为24点.
 
 
 #### Example
