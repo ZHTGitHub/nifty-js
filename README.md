@@ -68,7 +68,7 @@ console.log(result)
 
 #### Arguments
 
---
+无
 
 #### Returns
 
@@ -89,7 +89,7 @@ console.log(result)
 
 #### Arguments
 
---
+无
 
 #### Returns
 
@@ -244,3 +244,33 @@ console.log(result)
 // => {name: 'leslie', list: ['fruit']}
 ```
 
+### find(collection, predicate)
+
+返回匹配元素
+
+#### Arguments
+
+collection: 数组
+predicate: 目标值
+
+#### Returns
+
+(*): 返回包含目标值的元素.
+
+
+#### Example
+
+```bash
+const list = [{gender: 'male', name: 'leslie'}, { gender: 'female', name: 'lily' }]
+const result1 = find(list, ['gender', 'male'])
+console.log(result1)
+// => {gender: 'male'}
+
+const result2 = find(list, {gender: 'male'})
+console.log(result2)
+// => {gender: 'male'}
+
+const result3 = find(list, 'male')
+console.log(result3)
+// => {gender: 'male'}
+```
