@@ -18,16 +18,16 @@ import util from 'nifty-util'
 import { isEqual } from 'nifty-util'
 ```
 
-## isEqual(val1, val2)
+### isEqual(val1, val2)
 
 判断两个值是否绝对相等，数组/对象只比较其属性值是否绝对相等
 
-### Arguments
+#### Arguments
 
 val1: 任意值
 val2: 任意值
 
-### Returns
+#### Returns
 
 (boolean): 若两个值绝对相等返回true，否则返回false.
 
