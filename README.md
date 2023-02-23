@@ -328,7 +328,7 @@ console.log(result)
 // => [1, 2, 3, 4]
 ```
 
-### ==removeDuplicate(value)==
+==### removeDuplicate(value)==
 
 数组去重.
 
