@@ -327,7 +327,7 @@ const result = flatArray(list)
 console.log(result)
 // => [1, 2, 3, 4]
 ```
-
+<br />
 
 > ### removeDuplicate(value)
 
