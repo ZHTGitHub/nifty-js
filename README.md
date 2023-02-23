@@ -20,7 +20,8 @@ import { isEqual } from 'nifty-util'
 <br />
 
 ## 目录
-[isUndefined(value), 判断是否为undefined.](#isUndefined)
+[isUndefined, 是否为undefined](#isUndefined)
+
 <br />
 
 > ### isEqual(val1, val2)
