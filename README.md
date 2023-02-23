@@ -20,11 +20,12 @@ import { isEqual } from 'nifty-util'
 <br />
 
 ## 目录
-[isUndefined, 是否为undefined](#isUndefined)
+[isSymbol](#isSymbol)
+[isUndefined](#isUndefined)
 
 <br />
 
-> ### isEqual(val1, val2)
+> <h3 id="isEqual">isEqual(val1, val2)</h3>
 
 判断两个值是否绝对相等，数组/对象只比较其属性值是否绝对相等
 
@@ -48,7 +49,7 @@ console.log(result)
 ```
 <br />
 
-> ### isYummy(value)
+> <h3 id="isYummy">isYummy(value)</h3>
 
 判断值是否合法
 
@@ -70,7 +71,7 @@ console.log(result)
 ```
 <br />
 
-> ### getScrollOffset()
+> <h3 id="getScrollOffset">getScrollOffset()</h3>
 
 返回滚动条滚动距离
 
@@ -92,7 +93,7 @@ console.log(result)
 ```
 <br />
 
-> ### getViewportSize()
+> <h3 id="getViewportSize">getViewportSize()</h3>
 
 返回浏览器视口尺寸
 
@@ -114,7 +115,7 @@ console.log(result)
 ```
 <br />
 
-> ### queryToObject(search)
+> <h3 id="queryToObject">queryToObject(search)</h3>
 
 将 url 参数解析为 JS 对象
 
@@ -137,7 +138,7 @@ console.log(result)
 ```
 <br />
 
-> ### date(value)
+> <h3 id="date">date(value)</h3>
 
 返回日期的详细信息
 
@@ -186,7 +187,7 @@ console.log(result)
 ```
 <br />
 
-> ### set(object, path, value)
+> <h3 id="set">set(object, path, value)</h3>
 
 设置对象路径处的值
 
@@ -211,7 +212,7 @@ console.log(result)
 ```
 <br />
 
-> ### get(object, path, defaultValue)
+> <h3 id="get">get(object, path, defaultValue)</h3>
 
 获取对象路径处的值
 
@@ -236,7 +237,7 @@ console.log(result)
 ```
 <br />
 
-> ### deepClone(value)
+> <h3 id="deepClone">deepClone(value)</h3>
 
 深拷贝
 
@@ -259,7 +260,7 @@ console.log(result)
 ```
 <br />
 
-> ### find(collection, predicate)
+> <h3 id="find">find(collection, predicate)</h3>
 
 查找包含目标值的元素.
 
@@ -291,7 +292,7 @@ console.log(result3)
 ```
 <br />
 
-> ### findIndex(collection, predicate)
+> <h3 id="findIndex">findIndex(collection, predicate)</h3>
 
 查找包含目标值元素的下标.
 
@@ -323,7 +324,7 @@ console.log(result3)
 ```
 <br />
 
-> ### flatArray(value)
+> <h3 id="flatArray">flatArray(value)</h3>
 
 数组拍平.
 
@@ -346,7 +347,7 @@ console.log(result)
 ```
 <br />
 
-> ### removeDuplicate(value)
+> <h3 id="removeDuplicate">removeDuplicate(value)</h3>
 
 数组去重.
 
@@ -369,7 +370,7 @@ console.log(result)
 ```
 <br />
 
-> ### getType(value)
+> <h3 id="getType">getType(value)</h3>
 
 返回值的数据类型.
 
@@ -392,7 +393,7 @@ console.log(result)
 ```
 <br />
 
-> ### isArray(value)
+> <h3 id="isArray">isArray(value)</h3>
 
 判断是否为数组.
 
@@ -415,7 +416,7 @@ console.log(true)
 ```
 <br />
 
-> ### isBoolean(value)
+> <h3 id="isBoolean">isBoolean(value)</h3>
 
 判读是否为布尔值.
 
@@ -438,7 +439,7 @@ console.log(true)
 ```
 <br />
 
-> ### isFunction(value)
+> <h3 id="isFunction">isFunction(value)</h3>
 
 判断是否为函数.
 
@@ -461,7 +462,7 @@ console.log(true)
 ```
 <br />
 
-> ### isNull(value)
+> <h3 id="isNull">isNull(value)</h3>
 
 判断是否为null.
 
@@ -484,7 +485,7 @@ console.log(true)
 ```
 <br />
 
-> ### isNumber(value)
+> <h3 id="isNumber">isNumber(value)</h3>
 
 判读是否为数值.
 
@@ -507,7 +508,7 @@ console.log(true)
 ```
 <br />
 
-> ### isObject(value)
+> <h3 id="isObject">isObject(value)</h3>
 
 判断是否为对象.
 
@@ -530,7 +531,7 @@ console.log(true)
 ```
 <br />
 
-> ### isString(value)
+> <h3 id="isString">isString(value)</h3>
 
 判读是否为字符串.
 
@@ -553,7 +554,7 @@ console.log(true)
 ```
 <br />
 
-> ### isSymbol(value)
+> <h3 id="isSymbol">isSymbol(value)</h3>
 
 判断是否为symbol.
 
