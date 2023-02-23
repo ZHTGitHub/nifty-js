@@ -17,8 +17,9 @@ import util from 'nifty-util'
 // or
 import { isEqual } from 'nifty-util'
 ```
+<br />
 
-### isEqual(val1, val2)
+> ### isEqual(val1, val2)
 
 判断两个值是否绝对相等，数组/对象只比较其属性值是否绝对相等
 
@@ -40,8 +41,9 @@ const result = isEqual(1, '1')
 console.log(result)
 // => false
 ```
+<br />
 
-### isYummy(value)
+> ### isYummy(value)
 
 判断值是否合法
 
@@ -61,8 +63,9 @@ const result = isYummy({})
 console.log(result)
 // => false
 ```
+<br />
 
-### getScrollOffset()
+> ### getScrollOffset()
 
 返回滚动条滚动距离
 
@@ -82,8 +85,9 @@ const result = getScrollOffset()
 console.log(result)
 // => { x: 0, y: 100 }
 ```
+<br />
 
-### getViewportSize()
+> ### getViewportSize()
 
 返回浏览器视口尺寸
 
@@ -103,8 +107,9 @@ const result = getViewportSize()
 console.log(result)
 // => { width: 1920, height: 1080 }
 ```
+<br />
 
-### queryToObject(search)
+> ### queryToObject(search)
 
 将 url 参数解析为 JS 对象
 
@@ -125,8 +130,9 @@ const result = queryToObject(objUrl.search)
 console.log(result)
 // => { name: 'leslie', gender: 'male' }
 ```
+<br />
 
-### date(value)
+> ### date(value)
 
 返回日期的详细信息
 
@@ -173,8 +179,9 @@ console.log(result)
   year: 2023 
 }
 ```
+<br />
 
-### set(object, path, value)
+> ### set(object, path, value)
 
 设置对象路径处的值
 
@@ -197,8 +204,9 @@ const result = set(obj, 'a.b', 1)
 console.log(result)
 // => { a: { b: 1 } }
 ```
+<br />
 
-### get(object, path, defaultValue)
+> ### get(object, path, defaultValue)
 
 获取对象路径处的值
 
@@ -221,8 +229,9 @@ const result = set(obj, 'a.b')
 console.log(result)
 // => 1
 ```
+<br />
 
-### deepClone(value)
+> ### deepClone(value)
 
 深拷贝
 
@@ -243,8 +252,9 @@ const result = deepClone(obj)
 console.log(result)
 // => {name: 'leslie', list: ['fruit']}
 ```
+<br />
 
-### find(collection, predicate)
+> ### find(collection, predicate)
 
 查找包含目标值的元素.
 
@@ -274,8 +284,9 @@ const result3 = find(list, 'male')
 console.log(result3)
 // => {gender: 'male'}
 ```
+<br />
 
-### findIndex(collection, predicate)
+> ### findIndex(collection, predicate)
 
 查找包含目标值元素的下标.
 
@@ -305,8 +316,9 @@ const result3 = find(list, 'male')
 console.log(result3)
 // => 0
 ```
+<br />
 
-### flatArray(value)
+> ### flatArray(value)
 
 数组拍平.
 
