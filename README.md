@@ -68,7 +68,7 @@ console.log(result)
 
 #### Arguments
 
--
+--
 
 #### Returns
 
@@ -89,7 +89,7 @@ console.log(result)
 
 #### Arguments
 
--
+--
 
 #### Returns
 
