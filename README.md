@@ -41,4 +41,25 @@ console.log(result)
 // => false
 ```
 
+### isYummy(value)
+
+判断值是否合法
+
+#### Arguments
+
+value: 任意值
+
+#### Returns
+
+(boolean): 若值不为undefined、null、false、空字符串、空数组、空对象返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const result = isYummy({})
+console.log(result)
+// => false
+```
+
 
