@@ -33,3 +33,12 @@ val2: 任意值
 (boolean): 若两个值绝对相等返回true，否则返回false.
 
 
+#### Example
+
+```bash
+const result = isEqual(1, '1')
+console.log(result)
+// => false
+```
+
+
