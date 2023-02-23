@@ -172,6 +172,11 @@ normalMonth当前月份(1-12),
 
 am00Time为0点, pm24Time为24点.
 
+|  属性   | 说明  | 类型  |
+|  ----  | ----  | ----  |
+| year   | 年份  | number  |
+| month  | 月份  | number  |
+
 
 #### Example
 
@@ -217,6 +222,30 @@ const obj = {}
 const result = set(obj, 'a.b', 1)
 console.log(result)
 // => { a: { b: 1 } }
+```
+
+### get(object, path, defaultValue)
+
+获取对象路径处的值
+
+#### Arguments
+
+object: 要查询的对象
+path: 要获取的属性的路径
+defaultValue: 为未定义的解析值返回的值
+
+#### Returns
+
+(*): 返回解析值.
+
+
+#### Example
+
+```bash
+const obj = {a: {b: 1}}
+const result = set(obj, 'a.b')
+console.log(result)
+// => 1
 ```
 
 
