@@ -25,6 +25,7 @@ import { isEqual } from 'nifty-util'
 #### Arguments
 
 val1: 任意值
+
 val2: 任意值
 
 #### Returns
