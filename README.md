@@ -161,7 +161,7 @@ value: 字符串日期/日期对象，不传则为当前时间.
   am00Time: number, 
 
   pm24Time: number 
-  
+
 }): year年, month当前月份(0-11), day周, date日, 
 
 hours时, minutes分, seconds秒, milliseconds毫秒, 
@@ -193,6 +193,30 @@ console.log(result)
   time: 1677120576680, 
   year: 2023 
 }
+```
+
+### set(object, path, value)
+
+设置对象路径处的值
+
+#### Arguments
+
+object: 要修改的对象
+path: 要设置的属性的路径
+value: 要设置的值
+
+#### Returns
+
+(Object): 返回的对象.
+
+
+#### Example
+
+```bash
+const obj = {}
+const result = set(obj, 'a.b', 1)
+console.log(result)
+// => { a: { b: 1 } }
 ```
 
 
