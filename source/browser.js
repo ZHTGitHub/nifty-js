@@ -16,7 +16,7 @@ export const getScrollOffset = function() {
 }
 
 /**
- * @description 返回视口尺寸
+ * @description 返回浏览器视口尺寸
  */ 
 export const getViewportSize = function() {
   if(window.innerWidth) {
@@ -44,11 +44,11 @@ export const getViewportSize = function() {
 
 /**
  * @description 将 url 参数解析为 JS 对象
- * @param {String} query
+ * @param {String} search
  */ 
- export const queryToObject = function(query) {
+ export const queryToObject = function(search) {
   const obj = {}
-  const params = query.replace(/^\?/, '')
+  const params = search.replace(/^\?/, '')
 
   params.split('&').map(item => {
       const arr = item.split('=')

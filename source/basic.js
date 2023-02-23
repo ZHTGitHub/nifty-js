@@ -32,7 +32,7 @@ export const isEqual = function(val1, val2) {
 };
 
 /**
- * @description 判断值是否合法，合法返回 true
+ * @description 判断值是否合法
  * @param {Any} value
  */ 
 export const isYummy = function(value) {

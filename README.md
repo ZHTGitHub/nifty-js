@@ -62,4 +62,68 @@ console.log(result)
 // => false
 ```
 
+### getScrollOffset()
+
+返回滚动条滚动距离
+
+#### Arguments
+
+-
+
+#### Returns
+
+({ x: number, y: number }): x为横坐标滚动距离，y为纵坐标滚动距离.
+
+
+#### Example
+
+```bash
+const result = getScrollOffset()
+console.log(result)
+// => { x: 0, y: 100 }
+```
+
+### getViewportSize()
+
+返回浏览器视口尺寸
+
+#### Arguments
+
+-
+
+#### Returns
+
+({ width: number, height: number }): width为视口宽度，height为视口高度.
+
+
+#### Example
+
+```bash
+const result = getViewportSize()
+console.log(result)
+// => { width: 1920, height: 1080 }
+```
+
+### queryToObject(search)
+
+将 url 参数解析为 JS 对象
+
+#### Arguments
+
+search: url参数
+
+#### Returns
+
+(Object): 一个新的对象.
+
+
+#### Example
+
+```bash
+const objUrl = new URL('http://github.com?name=leslie&gender=male')
+const result = queryToObject(objUrl.search)
+console.log(result)
+// => { name: 'leslie', gender: 'male' }
+```
+
 
