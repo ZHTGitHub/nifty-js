@@ -232,7 +232,7 @@ value: 任意值
 
 #### Returns
 
-(*): 返回新的对象.
+(Object): 返回新的对象.
 
 
 #### Example
@@ -246,7 +246,7 @@ console.log(result)
 
 ### find(collection, predicate)
 
-返回匹配元素
+查找包含目标值的元素.
 
 #### Arguments
 
@@ -255,7 +255,7 @@ predicate: 目标值
 
 #### Returns
 
-(*): 返回包含目标值的元素.
+(*): 返回包含目标值的元素，否则返回 undefined.
 
 
 #### Example
@@ -273,4 +273,79 @@ console.log(result2)
 const result3 = find(list, 'male')
 console.log(result3)
 // => {gender: 'male'}
+```
+
+### findIndex(collection, predicate)
+
+查找包含目标值元素的下标.
+
+#### Arguments
+
+collection: 数组
+predicate: 目标值
+
+#### Returns
+
+(number): 返回匹配元素的下标，否则返回-1.
+
+
+#### Example
+
+```bash
+const list = [{gender: 'male', name: 'leslie'}, { gender: 'female', name: 'lily' }]
+const result1 = find(list, ['gender', 'male'])
+console.log(result1)
+// => 0
+
+const result2 = find(list, {gender: 'male'})
+console.log(result2)
+// => 0
+
+const result3 = find(list, 'male')
+console.log(result3)
+// => 0
+```
+
+### flatArray(value)
+
+数组拍平.
+
+#### Arguments
+
+value: 数组
+
+#### Returns
+
+(Array): 返回一个新的一维数组.
+
+
+#### Example
+
+```bash
+const list = [1, [2, [3, [4]]]]
+const result = flatArray(list)
+console.log(result)
+// => [1, 2, 3, 4]
+```
+
+### removeDuplicate(value)
+
+数组去重.
+
+#### Arguments
+
+value: 数组
+
+#### Returns
+
+(Array): 返回一个新的数组.
+
+
+#### Example
+
+```bash
+const list = [1, 1, {num: 2}, {num: 2}]
+const result = removeDuplicate(list)
+console.log(result)
+// => [1, {num: 2}]
 ```
