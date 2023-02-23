@@ -126,4 +126,39 @@ console.log(result)
 // => { name: 'leslie', gender: 'male' }
 ```
 
+### date(value)
+
+返回日期的详细信息
+
+#### Arguments
+
+value: 字符串日期/日期对象，不传则为当前时间.
+
+#### Returns
+
+({ year: number, month: number, day: number, date: number, hours: number, minutes: number, seconds: number, milliseconds: number, time: number, normalMonth: number, am00Time: number, pm24Time: number }): year: 年, month: 当前月份(0-11), day: 周, date: 日, hours: 时, minutes: 分, seconds: 秒, milliseconds: 毫秒, time: 自 1970 年 1 月 1 日 00:00:00 UTC 到当前时间的毫秒数, normalMonth: 当前月份(1-12), am00Time: 0点, pm24Time: 24点.
+
+
+#### Example
+
+```bash
+const result = date()
+console.log(result)
+// => 
+{ 
+  am00Time: 1677081600000, 
+  date: 23, 
+  day: 4, 
+  hours: 10, 
+  milliseconds: 680, 
+  minutes: 49, 
+  month: 1, 
+  normalMonth: 2, 
+  pm24Time: 1677167999999 
+  seconds: 36, 
+  time: 1677120576680, 
+  year: 2023 
+}
+```
+
 
