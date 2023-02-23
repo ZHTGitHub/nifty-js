@@ -20,6 +20,20 @@ import { isEqual } from 'nifty-util'
 <br />
 
 ## 目录
+[deepClone](#deepClone)  
+[find](#find)  
+[findIndex](#findIndex)  
+[flatArray](#flatArray)  
+[removeDuplicate](#removeDuplicate)  
+
+[isSymbol](#getType)  
+[isSymbol](#isArray)  
+[isSymbol](#isBoolean)  
+[isSymbol](#isFunction)  
+[isSymbol](#isNull)  
+[isSymbol](#isNumber)  
+[isSymbol](#isObject)  
+[isSymbol](#isString)  
 [isSymbol](#isSymbol)  
 [isUndefined](#isUndefined)
 
