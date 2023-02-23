@@ -362,3 +362,233 @@ const result = removeDuplicate(list)
 console.log(result)
 // => [1, {num: 2}]
 ```
+<br />
+
+> ### getType(value)
+
+返回值的数据类型.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(string): 返回boolean | NaN | number | string | array | function | object | null | undefined | symbol.
+
+
+#### Example
+
+```bash
+const value = 1
+const result = getType(value)
+console.log(result)
+// => number
+```
+<br />
+
+> ### isArray(value)
+
+判断是否为数组.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为数组返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = []
+const result = isArray(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isBoolean(value)
+
+判读是否为布尔值.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为布尔值返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = false
+const result = isBoolean(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isFunction(value)
+
+判断是否为函数.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为函数返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = function() {}
+const result = isFunction(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isNull(value)
+
+判断是否为null.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为null返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = null
+const result = isNull(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isNumber(value)
+
+判读是否为数值.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为数值返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = 1
+const result = isNumber(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isObject(value)
+
+判断是否为对象.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为对象返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = {}
+const result = isObject(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isString(value)
+
+判读是否为字符串.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为字符串返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = ''
+const result = isString(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isSymbol(value)
+
+判断是否为symbol.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为symbol返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = Symbol('name')
+const result = isSymbol(value)
+console.log(true)
+// => true
+```
+<br />
+
+> ### isUndefined(value)
+
+判断是否为undefined.
+
+#### Arguments
+
+value: 任意值.
+
+#### Returns
+
+(boolean): 若为symbol返回true，否则返回false.
+
+
+#### Example
+
+```bash
+const value = void 0
+const result = isUndefined(value)
+console.log(true)
+// => true
+```
