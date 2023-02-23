@@ -19,6 +19,10 @@ import { isEqual } from 'nifty-util'
 ```
 <br />
 
+## 目录
+[isUndefined(value), 判断是否为undefined.](#isUndefined)
+<br />
+
 > ### isEqual(val1, val2)
 
 判断两个值是否绝对相等，数组/对象只比较其属性值是否绝对相等
@@ -571,7 +575,7 @@ console.log(true)
 ```
 <br />
 
-> ### isUndefined(value)
+> <h3 id="isUndefined">isUndefined(value)</h3>
 
 判断是否为undefined.
 
