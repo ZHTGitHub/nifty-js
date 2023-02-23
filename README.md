@@ -20,7 +20,7 @@ import { isEqual } from 'nifty-util'
 <br />
 
 ## 目录
-[isSymbol](#isSymbol)
+[isSymbol](#isSymbol)  
 [isUndefined](#isUndefined)
 
 <br />
