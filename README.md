@@ -1,6 +1,6 @@
 # nifty-util
 
-nifty-util是一个实用而简单的JavaScript工具库。
+nifty-util是一个实用的JavaScript工具库。
 
 ## 安装
 
