@@ -5,7 +5,7 @@ export declare function getScrollOffset(): { x: number, y: number };
 export declare function getViewportSize(): { width: number, height: number };
 export declare function queryToObject(query: string): {}
 
-export declare function date(value: string | Date): { year: number, month: number, day: number, date: number, hours: number, minutes: number, seconds: number, milliseconds: number, time: number, normalMonth: number, am00Time: number, pm24Time: number };
+export declare function date(value: string | number | Date): { year: number, month: number, day: number, date: number, hours: number, minutes: number, seconds: number, milliseconds: number, time: number, normalMonth: number, am00Time: number, pm24Time: number };
 
 export declare function fileToBlob(file: File): Promise<any>;
 export declare function fileToBase64(file: File): Promise<any>;
