@@ -14,12 +14,12 @@ export const fileToBlob = (file) => {
 }
 
 // Blob对象转File对象
-// export const blobToFile = (blob, filename) => {
-//   const url = URL.createObjectURL(blob)
-//   const file = new File([blob], filename)
-//   URL.revokeObjectURL(url)
-//   return file
-// }
+export const blobToFile = (blob, filename) => {
+  const url = URL.createObjectURL(blob)
+  const file = new File([blob], filename)
+  URL.revokeObjectURL(url)
+  return file
+}
 
 // File对象转Base64编码
 export const fileToBase64 = (file) => {

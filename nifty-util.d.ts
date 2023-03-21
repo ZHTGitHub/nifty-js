@@ -8,10 +8,12 @@ export declare function queryToObject(query: string): {}
 export declare function date(value: string | number | Date): { year: number, month: number, day: number, date: number, hours: number, minutes: number, seconds: number, milliseconds: number, time: number, normalMonth: number, am00Time: number, pm24Time: number };
 
 export declare function fileToBlob(file: File): Promise<any>;
+export declare function blobToFile(blob: string, filename: string): File;
 export declare function fileToBase64(file: File): Promise<any>;
 export declare function base64ToFile(base64: string, name: string): Promise<any>;
 export declare function formatConvert(file: File, extName: string): Promise<any>;
 export declare function compressImage(file: File, quality: number): Promise<any>;
+export declare function downloadFile(url: string, callback: Function): undefined;
 
 export declare function set(object: {}, path: string | [], value: any): {};
 export declare function get(object: {}, path: string | [], defaultValue: any): {};
