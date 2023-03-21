@@ -6,7 +6,7 @@ export default {
   output: {
     file: 'nifty-util.js',
     format: 'umd',
-    name: 'nifty-util'
+    name: 'nifty'
   },
 
   plugins: [

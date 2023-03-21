@@ -1,6 +1,6 @@
 {
   "name": "nifty-util",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "JavaScript实用功能",
   "main": "nifty-util.js",
   "types": "nifty-util.d.ts",

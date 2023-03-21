@@ -2,57 +2,56 @@
 export const fileToBlob = (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
-
-    reader.onload = function (event) {
-      const blob = new Blob([event.target.result], { type: file.type })
-      const URL = window.URL || window.webkitURL
-
-      const blobURL = URL.createObjectURL(blob)
-
-      resolve(blobURL)
-    }
-
     reader.readAsArrayBuffer(file)
 
-    reader.onerror = function(error) {
-      reject(error)
+    reader.onload = () => {
+      const blob = new Blob([reader.result], { type: file.type })
+      resolve(blob)
     }
+
+    reader.onerror = reject
   })
 }
+
+// Blob对象转File对象
+// export const blobToFile = (blob, filename) => {
+//   const url = URL.createObjectURL(blob)
+//   const file = new File([blob], filename)
+//   URL.revokeObjectURL(url)
+//   return file
+// }
 
 // File对象转Base64编码
 export const fileToBase64 = (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
-
-    reader.onload = function(event) {
-      resolve(event.target.result)
-    }
-
     reader.readAsDataURL(file)
 
-    reader.onerror = function(error) {
-      reject(error)
+    reader.onload = (event) => {
+      const base64 = reader.result.split(',')[1]
+      resolve(base64)
     }
+
+    reader.onerror = reject
   })
 }
 
 // Base64编码转File对象
-export const base64ToFile = (base64, name) => {
-  let arr = base64.split(',')
-  let mime = arr[0].match(/:(.*?);/)[1]
-  let bstr = atob(arr[1])
-  let n = bstr.length
-  let u8arr = new Uint8Array(n)
+export const base64ToFile = (base64, filename, type) => {
+  const byteString = atob(base64)
+  const ab = new ArrayBuffer(byteString.length)
+  const ia = new Uint8Array(ab)
 
-  while(n--) {
-    u8arr[n] = bstr.charCodeAt(n)
+  for (let i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i)
   }
 
-  return new File([u8arr], name, { type: mime })
+  const blob = new Blob([ab], { type })
+
+  return new File([blob], filename, { type })
 }
 
-// 格式转换
+// 图片格式转换
 export const formatConvert = (file, extName = 'jpeg') => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader() 
@@ -88,8 +87,8 @@ export const formatConvert = (file, extName = 'jpeg') => {
   })
 }
 
-// 压缩文件
-export const compressFile = (file, quality = 0.2) => {
+// 压缩图片
+export const compressImage = (file, quality = 0.2) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader() 
 
@@ -127,22 +126,19 @@ export const compressFile = (file, quality = 0.2) => {
 }
 
 // 下载文件
-// export const saveFile = (blob, filename) => {
-// 	if (window.navigator.msSaveOrOpenBlob) {
-// 		window.navigator.msSaveOrOpenBlob(blob, filename)
-// 	} 
-//   else {
-// 		const anchor = document.createElement('a')
-// 		document.body.appendChild(anchor)
-// 		const url = window.URL.createObjectURL(blob)
-		
-//     anchor.href = url
-// 		anchor.download = filename
-// 		anchor.click()
+export const downloadFile = (url, callback) => {
+  const iframe = document.createElement('iframe')
+  iframe.style.display = 'none'
+  iframe.src = url
 
-// 		setTimeout(() => {
-// 			window.URL.revokeObjectURL(url)
-// 			document.body.removeChild(anchor)
-// 		}, 0)
-// 	}
-// }
+  iframe.onerror = () => {
+    document.head.removeChild(iframe)
+    callback()
+  }
+
+  document.head.appendChild(iframe)
+
+  // // setTimeout(() => {
+  // //   document.head.removeChild(iframe)
+  // // }, 60000)
+}

@@ -11,7 +11,7 @@ export declare function fileToBlob(file: File): Promise<any>;
 export declare function fileToBase64(file: File): Promise<any>;
 export declare function base64ToFile(base64: string, name: string): Promise<any>;
 export declare function formatConvert(file: File, extName: string): Promise<any>;
-export declare function compressFile(file: File, quality: number): Promise<any>;
+export declare function compressImage(file: File, quality: number): Promise<any>;
 
 export declare function set(object: {}, path: string | [], value: any): {};
 export declare function get(object: {}, path: string | [], defaultValue: any): {};
