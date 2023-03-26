@@ -40,19 +40,21 @@ export const fileToBase64 = (file) => {
   })
 }
 
-// Base64编码转File对象
-export const base64ToFile = (base64, filename, type) => {
-  const byteString = atob(base64)
-  const ab = new ArrayBuffer(byteString.length)
-  const ia = new Uint8Array(ab)
+// Base64转File对象
+export const base64ToFile = (base64String, filename, mime) => {
+  // 将 Base64 字符串转换为二进制数据
+  const byteCharacters = atob(base64String.split(',')[1])
+  const byteArrays = []
 
-  for (let i = 0; i < byteString.length; i++) {
-    ia[i] = byteString.charCodeAt(i)
+  for (let i = 0; i < byteCharacters.length; i++) {
+    byteArrays.push(byteCharacters.charCodeAt(i))
   }
 
-  const blob = new Blob([ab], { type })
+  const byteArray = new Uint8Array(byteArrays)
+  const blob = new Blob([byteArray], {type: mime})
+  const file = new File([blob], filename, {type: mime})
 
-  return new File([blob], filename, { type })
+  return file
 }
 
 // 图片格式转换
@@ -83,11 +85,11 @@ export const formatConvert = (file, extName = 'jpeg') => {
       image.src = src
     }
 
-    reader.readAsDataURL(file)
-
     reader.onerror = function(error) {
       reject(error)
     }
+
+    reader.readAsDataURL(file)
   })
 }
 
@@ -110,12 +112,13 @@ export const compressImage = (file, quality = 0.2) => {
         ctx.drawImage(image, 0, 0, image.width, image.height) 
 
         const extName = 'jpeg'
+        const type = `image/${ extName }`
 
-        const canvasURL = canvas.toDataURL('image/' + extName, quality)
+        const canvasURL = canvas.toDataURL(type, quality)
 
         const newName = file.name.replace(/([^\.]+)$/, extName)
 
-        resolve(base64ToFile(canvasURL, newName))
+        resolve(base64ToFile(canvasURL, newName, type))
       }
 
       image.src = src
