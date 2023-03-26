@@ -27,9 +27,13 @@ export const fileToBase64 = (file) => {
     const reader = new FileReader()
     reader.readAsDataURL(file)
 
-    reader.onload = (event) => {
-      const base64 = reader.result.split(',')[1]
+    reader.onload = () => {
+      const base64 = reader.result
       resolve(base64)
+    }
+
+    reader.onerror = () => {
+      resolve({ code: 400 })
     }
 
     reader.onerror = reject
