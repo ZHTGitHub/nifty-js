@@ -140,7 +140,7 @@ export const downloadFile = (url, callback) => {
 
   iframe.onerror = () => {
     document.head.removeChild(iframe)
-    callback()
+    callback && callback()
   }
 
   document.head.appendChild(iframe)
